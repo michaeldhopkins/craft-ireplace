@@ -1,3 +1,13 @@
+# Note
+
+I suggest you use https://github.com/victor-in/Craft-TwigPCRE instead.
+
+Then, you can use Craft's built-in |replace filter to do case-insensitive replacements with dynamic regex like so:
+
+```
+|replace('/' ~ variableName|preg_quote('/') ~ '/i', 'Replacement Text')
+```
+
 # IReplace Twig filter
 
 Simple Twig filter to enable |ireplace case insensitive alternative to |replace.
@@ -12,8 +22,14 @@ Simple Twig filter to enable |ireplace case insensitive alternative to |replace.
 Unlike Craft's |replace, there is only one way to use |ireplace:
 
 ```
-    {{ entry.fieldname|ireplace('Search','Replacement') }}
-````
+    {{ entry.fieldname|ireplace('Search','Replacement Text') }}
+```
+
+    or, dynamically:
+
+```
+    {{ entry.fieldname|ireplace(variableName,'Replacement Text') }}
+```
 This example would find and replace Search, SEARCH, search, etc. Arrays and regex are not supported yet.
 
 ## Credits
