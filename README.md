@@ -17,8 +17,8 @@ Unlike Craft's |replace, there is only one way to use |ireplace:
 This example would find and replace Search, SEARCH, search, etc. Arrays and regex are not supported yet.
 
 ## Credits
-http://stackoverflow.com/a/28721285/321922
-https://github.com/antcooper/nl2li
+1. http://stackoverflow.com/a/28721285/321922
+2. https://github.com/antcooper/nl2li
 
 ## Changelog
 
